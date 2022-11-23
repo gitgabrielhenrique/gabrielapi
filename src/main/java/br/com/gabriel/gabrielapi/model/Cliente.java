@@ -1,5 +1,7 @@
 package br.com.gabriel.gabrielapi.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -14,6 +16,7 @@ public class Cliente {
     private String nome;
 
     @OneToMany(mappedBy = "cliente")
+    @JsonIgnore
     private List<Contato> contato=new ArrayList<>();
 
     public long getId() {

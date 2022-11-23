@@ -12,7 +12,7 @@ import java.util.List;
 public class ContatoResource {
 
 @Autowired
-public ContatoRepository contatoRepository;
+private ContatoRepository contatoRepository;
 
 @GetMapping("/todos")
     public List<Contato> listarTodosContatos(){
